@@ -1,21 +1,15 @@
 package com.ulco.curae.dto;
 
-import com.ulco.curae.enums.HumanTypeEnum;
 import com.ulco.curae.model.DoctorDO;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Null;
-import javax.validation.constraints.Size;
 
 @Data
-@AllArgsConstructor // prends tous les apramètre de notre classe en entrée
+@AllArgsConstructor // prends tous les paramètres de notre classe en entrée
 @NoArgsConstructor // ajouter un constructeur par défaut
-
+@EqualsAndHashCode(callSuper = true)
 public class DoctorDTO extends HumanDTO{
 
     @ApiModelProperty("id : service du docteur")

@@ -1,12 +1,13 @@
 package com.ulco.curae.model;
 
 import com.ulco.curae.dto.DoctorDTO;
-import com.ulco.curae.dto.PokemonDTO;
-import com.ulco.curae.enums.HumanTypeEnum;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Getter
 @Setter
