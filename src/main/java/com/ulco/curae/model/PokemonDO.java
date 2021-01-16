@@ -27,7 +27,7 @@ public class PokemonDO {
     private Double poids;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "type")
+    @Column(name = "sexe")
     private SexeTypeEnum sexe;
 
 

@@ -19,7 +19,7 @@
             <column name="poids" type="DOUBLE">
                 <constraints nullable="false"/>
             </column>
-            <column name="type" type="VARCHAR(10)">
+            <column name="sexe" type="VARCHAR(10)">
                 <constraints nullable="false"/>
             </column>
         </createTable>
