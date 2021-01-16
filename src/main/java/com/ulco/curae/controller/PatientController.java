@@ -70,7 +70,7 @@ public class PatientController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @ApiOperation("Mettre à jour un patient.")
     public void updateOne(@PathVariable final Integer id,
-                          @RequestBody @Valid final PatientDTO patientDTO) {
+                          @RequestBody final PatientDTO patientDTO) {
         patientService.updateOne(patientDTO, id);
     }
 }

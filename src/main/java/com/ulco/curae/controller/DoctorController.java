@@ -70,7 +70,8 @@ public class DoctorController {
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @ApiOperation("Mettre à jour un docteur.")
-    public void updateOne(@PathVariable final Integer id, @RequestBody @Valid final DoctorDTO doctorDTO) {
+    public void updateOne(@PathVariable final Integer id,
+                          @RequestBody final DoctorDTO doctorDTO) {
         doctorService.updateOne(doctorDTO, id);
     }
 }

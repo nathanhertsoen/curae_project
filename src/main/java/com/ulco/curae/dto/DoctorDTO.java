@@ -1,6 +1,7 @@
 package com.ulco.curae.dto;
 
 import com.ulco.curae.model.DoctorDO;
+import com.ulco.curae.model.PatientDO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -28,7 +29,10 @@ public class DoctorDTO extends HumanDTO {
 
     public DoctorDO toDoctorDO(){
     DoctorDO doctorDO = new DoctorDO();
-
+        doctorDO.setId(id);
+        doctorDO.setFirstname(firstname);
+        doctorDO.setLastname(lastname);
+        doctorDO.setSexe(sexe);
         doctorDO.setServiceId(serviceId);
 
     return doctorDO;

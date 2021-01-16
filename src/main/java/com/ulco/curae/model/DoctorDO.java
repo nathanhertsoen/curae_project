@@ -16,8 +16,9 @@ public class DoctorDO extends HumanDO {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "serviceId")
-    private Integer serviceId;
+    // between quote, names become case-sensitive, then use column named in uppercase to call the right column name
+    @Column(name = "SERVICEID")
+    public Integer serviceId;
 
     @Transient
     public DoctorDTO toDoctorDTO() {
