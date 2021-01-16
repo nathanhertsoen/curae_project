@@ -19,7 +19,7 @@ import javax.validation.constraints.Positive;
 // - or has implementations of equals/hash that "handle the situation properly"
 @EqualsAndHashCode(callSuper = true)
 
-public class DoctorDTO extends PatientDTO {
+public class DoctorDTO extends HumanDTO {
 
     @ApiModelProperty("id : service du docteur")
     @Positive(message ="L'id doit être positive")
@@ -28,10 +28,7 @@ public class DoctorDTO extends PatientDTO {
 
     public DoctorDO toDoctorDO(){
     DoctorDO doctorDO = new DoctorDO();
-        doctorDO.setId(id);
-        doctorDO.setFirstname(firstname);
-        doctorDO.setLastname(lastname);
-        doctorDO.setHumanType(humanType);
+
         doctorDO.setServiceId(serviceId);
 
     return doctorDO;

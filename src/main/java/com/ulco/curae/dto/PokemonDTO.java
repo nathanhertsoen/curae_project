@@ -1,6 +1,6 @@
 package com.ulco.curae.dto;
 
-import com.ulco.curae.enums.HumanTypeEnum;
+import com.ulco.curae.enums.SexeTypeEnum;
 import com.ulco.curae.model.PokemonDO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -41,7 +41,7 @@ public class PokemonDTO {
     @ApiModelProperty("type de pokemon")
 //    @NotEmpty(groups = Default.class, message = "Le type doit être défini")
     @NotNull(message = "Vous devez saisir un des trois types suivants : FEU ; EAU ; PLANTE")
-    private HumanTypeEnum pokemonType;
+    private SexeTypeEnum sexe;
 
 
     public PokemonDO toPokemonDO(){
@@ -50,7 +50,7 @@ public class PokemonDTO {
     pokemonDO.setName(name);
     pokemonDO.setTaille(taille);
     pokemonDO.setPoids(poids);
-    pokemonDO.setHumanType(pokemonType);
+    pokemonDO.setSexe(sexe);
 
     return pokemonDO;
     }

@@ -1,7 +1,7 @@
 package com.ulco.curae.model;
 
 import com.ulco.curae.dto.PokemonDTO;
-import com.ulco.curae.enums.HumanTypeEnum;
+import com.ulco.curae.enums.SexeTypeEnum;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -28,7 +28,7 @@ public class PokemonDO {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "type")
-    private HumanTypeEnum humanType;
+    private SexeTypeEnum sexe;
 
 
     @Transient
@@ -38,7 +38,7 @@ public class PokemonDO {
         pokemonDTO.setName(name);
         pokemonDTO.setTaille(taille);
         pokemonDTO.setPoids(poids);
-        pokemonDTO.setPokemonType(humanType);
+        pokemonDTO.setSexe(sexe);
 
         return pokemonDTO;
     }

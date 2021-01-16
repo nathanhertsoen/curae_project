@@ -23,6 +23,8 @@
                 <constraints nullable="false"/>
             </column>
         </createTable>
+
+
         <createTable tableName="docteur">
             <column autoIncrement="true" name="id" type="INT">
                 <constraints primaryKey="true"/>
@@ -40,6 +42,8 @@
                 <constraints nullable="false"/>
             </column>
         </createTable>
+
+
         <createTable tableName="patient">
             <column autoIncrement="true" name="id" type="INT">
                 <constraints primaryKey="true"/>

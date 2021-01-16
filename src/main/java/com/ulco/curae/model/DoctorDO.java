@@ -4,16 +4,17 @@ import com.ulco.curae.dto.DoctorDTO;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Transient;
+import javax.persistence.*;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "docteur")
-public class DoctorDO extends PatientDO {
+public class DoctorDO extends HumanDO {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @Column(name = "id de service")
     private Integer serviceId;
@@ -24,7 +25,7 @@ public class DoctorDO extends PatientDO {
         doctorDTO.setId(id);
         doctorDTO.setFirstname(firstname);
         doctorDTO.setLastname(lastname);
-        doctorDTO.setHumanType(humanType);
+        doctorDTO.setSexe(sexe);
         doctorDTO.setServiceId(serviceId);
 
         return doctorDTO;

@@ -11,7 +11,7 @@ spring:
   datasource:
     username: user
     password: user
-    url: jdbc:h2:mem:pokemon_db;
+    url: jdbc:h2:mem:curae_db;
     driver-class-name: org.h2.Driver
 
 server:

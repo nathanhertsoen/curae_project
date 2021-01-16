@@ -55,12 +55,12 @@ public class PatientController {
     @PostMapping
     @ApiOperation("Créer un patient.")
     public ResponseEntity<Void> save(@RequestBody final PatientDTO patientDTO) {
-        final PatientDTO createdDoctor = patientService.save(patientDTO);
+        final PatientDTO createdPatient = patientService.save(patientDTO);
 
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
-                .buildAndExpand(createdDoctor.getId()).toUri();
+                .buildAndExpand(createdPatient.getId()).toUri();
 
         return ResponseEntity.created(location).build();
     }
