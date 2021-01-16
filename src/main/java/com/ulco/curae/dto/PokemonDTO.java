@@ -50,7 +50,7 @@ public class PokemonDTO {
     pokemonDO.setName(name);
     pokemonDO.setTaille(taille);
     pokemonDO.setPoids(poids);
-    pokemonDO.setPokemonType(pokemonType);
+    pokemonDO.setHumanType(pokemonType);
 
     return pokemonDO;
     }

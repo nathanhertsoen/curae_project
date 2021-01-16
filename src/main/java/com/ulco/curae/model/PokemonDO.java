@@ -28,7 +28,7 @@ public class PokemonDO {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "type")
-    private HumanTypeEnum pokemonType;
+    private HumanTypeEnum humanType;
 
 
     @Transient
@@ -38,7 +38,7 @@ public class PokemonDO {
         pokemonDTO.setName(name);
         pokemonDTO.setTaille(taille);
         pokemonDTO.setPoids(poids);
-        pokemonDTO.setPokemonType(pokemonType);
+        pokemonDTO.setPokemonType(humanType);
 
         return pokemonDTO;
     }

@@ -23,7 +23,7 @@
                 <constraints nullable="false"/>
             </column>
         </createTable>
-        <createTable tableName="doctor">
+        <createTable tableName="docteur">
             <column autoIncrement="true" name="id" type="INT">
                 <constraints primaryKey="true"/>
             </column>
