@@ -1,5 +1,6 @@
 package com.ulco.curae.model;
 
+import com.ulco.curae.dto.PatientDTO;
 import com.ulco.curae.dto.PokemonDTO;
 import com.ulco.curae.enums.HumanTypeEnum;
 import lombok.Getter;
@@ -9,7 +10,9 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-abstract class HumanDO {
+@Entity
+@Table(name = "patient")
+public class PatientDO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,15 +29,14 @@ abstract class HumanDO {
     protected HumanTypeEnum humanType;
 
 
-//    @Transient
-//    public PokemonDTO toPokemonDTO() {
-//        PokemonDTO pokemonDTO = new PokemonDTO();
-//        pokemonDTO.setId(id);
-//        pokemonDTO.setName(name);
-//        pokemonDTO.setTaille(taille);
-//        pokemonDTO.setPoids(poids);
-//        pokemonDTO.setPokemonType(pokemonType);
-//
-//        return pokemonDTO;
-//    }
+    @Transient
+    public PatientDTO toPatientDTO() {
+        PatientDTO patientDTO = new PatientDTO();
+        patientDTO.setId(id);
+        patientDTO.setFirstname(firstname);
+        patientDTO.setLastname(lastname);
+        patientDTO.setHumanType(humanType);
+
+        return patientDTO;
+    }
 }

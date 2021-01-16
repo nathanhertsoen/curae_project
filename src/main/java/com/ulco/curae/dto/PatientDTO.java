@@ -1,6 +1,7 @@
 package com.ulco.curae.dto;
 
 import com.ulco.curae.enums.HumanTypeEnum;
+import com.ulco.curae.model.PatientDO;
 import com.ulco.curae.model.PokemonDO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -13,22 +14,22 @@ import javax.validation.constraints.*;
 @AllArgsConstructor // prends tous les apramètre de notre classe en entrée
 @NoArgsConstructor // ajouter un constructeur par défaut
 
-abstract class HumanDTO {
+public class PatientDTO {
 
     @ApiModelProperty("id du patient")
-    @Null(message ="L'id doit être vide à la création")
+    @Null(message = "L'id doit être vide à la création")
     protected Integer id;
 
 
     @ApiModelProperty("prénom du patient")
     @NotBlank(message = "Le patient a besoin d'un prénom")
-    @Size(min = 1, max = 20, message ="la taille du prénom doit être comprise entre 1 et 20 caratères")
+    @Size(min = 1, max = 20, message = "la taille du prénom doit être comprise entre 1 et 20 caratères")
     protected String firstname;
 
 
     @ApiModelProperty("nom du patient")
     @NotBlank(message = "Le patient a besoin d'un nom de famille")
-    @Size(min = 1, max = 20, message ="la taille du nom doit être comprise entre 1 et 20 caratères")
+    @Size(min = 1, max = 20, message = "la taille du nom doit être comprise entre 1 et 20 caratères")
     protected String lastname;
 
 
@@ -37,15 +38,14 @@ abstract class HumanDTO {
     protected HumanTypeEnum humanType;
 
 
-//    public PokemonDO toPokemonDO(){
-//    PokemonDO pokemonDO = new PokemonDO();
-//    pokemonDO.setId(id);
-//    pokemonDO.setName(firstname);
-//    pokemonDO.setTaille(taille);
-//    pokemonDO.setPoids(poids);
-//    pokemonDO.setPokemonType(pokemonType);
-//
-//    return pokemonDO;
-//    }
+    public PatientDO toPatientDO() {
+        PatientDO patientDO = new PatientDO();
+        patientDO.setId(id);
+        patientDO.setFirstname(firstname);
+        patientDO.setLastname(lastname);
+        patientDO.setHumanType(humanType);
+
+        return patientDO;
+    }
 
 }

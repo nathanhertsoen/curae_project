@@ -55,7 +55,7 @@ public class PokemonController {
 
     @PostMapping
     @ApiOperation("Créer un pokemon.")
-    public ResponseEntity<Void> save(@RequestBody @Valid final PokemonDTO pokemonDTO) {
+    public ResponseEntity<Void> save(@RequestBody final PokemonDTO pokemonDTO) {
         final PokemonDTO createdUser = pokemonService.save(pokemonDTO);
 
         URI location = ServletUriComponentsBuilder

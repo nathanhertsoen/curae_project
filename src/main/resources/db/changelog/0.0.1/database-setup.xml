@@ -23,8 +23,41 @@
                 <constraints nullable="false"/>
             </column>
         </createTable>
+        <createTable tableName="doctor">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="firstname" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="lastname" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sexe" type="VARCHAR(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="serviceId" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="patient">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="firstname" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="lastname" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sexe" type="VARCHAR(3)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
         <rollback>
             <dropTable tableName="pokemon"/>
+            <dropTable tableName="docteur"/>
+            <dropTable tableName="patient"/>
         </rollback>
     </changeSet>
 </databaseChangeLog>

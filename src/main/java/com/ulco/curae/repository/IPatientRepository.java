@@ -1,9 +1,9 @@
 package com.ulco.curae.repository;
 
-import com.ulco.curae.model.DoctorDO;
+import com.ulco.curae.model.PatientDO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IDoctorRepository extends JpaRepository<DoctorDO, Integer> {
+public interface IPatientRepository extends JpaRepository<PatientDO, Integer> {
 }

@@ -12,8 +12,8 @@ import javax.persistence.Transient;
 @Getter
 @Setter
 @Entity
-@Table(name = "doctor")
-public class DoctorDO extends HumanDO{
+@Table(name = "docteur")
+public class DoctorDO extends PatientDO {
 
     @Column(name = "id de service")
     private Integer serviceId;

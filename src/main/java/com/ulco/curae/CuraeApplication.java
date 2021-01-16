@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 
-public class PokemonApplication {
+public class CuraeApplication {
     @ApiModelProperty("Powered by Hertsoen Technology ©")
     public static void main(String[] args) {
-        SpringApplication.run(PokemonApplication.class, args);
+        SpringApplication.run(CuraeApplication.class, args);
 
     }
 }

@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 @Slf4j
 //@Primary
-@Profile("development")
+//@Profile("development")
 @Service("PokemonServiceUsingMAP")
 public class PokemonServiceV2 implements IPokemonService {
 

@@ -16,8 +16,8 @@ import java.util.stream.Collectors;
 
 @Slf4j
 //@Primary
-@Profile("development")
-@Service("PokemonServiceUsingMAP")
+//@Profile("development")
+@Service("DoctorService")
 public class DoctorService implements IDoctorService {
 
     @Autowired
