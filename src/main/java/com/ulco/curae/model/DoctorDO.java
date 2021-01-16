@@ -14,9 +14,9 @@ public class DoctorDO extends HumanDO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    protected Integer id;
 
-    @Column(name = "id de service")
+    @Column(name = "serviceId")
     private Integer serviceId;
 
     @Transient
