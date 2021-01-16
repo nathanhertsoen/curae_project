@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 
 @Data
@@ -24,6 +25,7 @@ public class DoctorDTO extends HumanDTO {
 
     @ApiModelProperty("id : service du docteur")
     @Positive(message ="L'id doit être positive")
+//    @NotNull(message ="L'id ne peut pas être nulle")
     private Integer serviceId;
 
 
