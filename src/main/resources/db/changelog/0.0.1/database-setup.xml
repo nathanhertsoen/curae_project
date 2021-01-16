@@ -58,10 +58,71 @@
                 <constraints nullable="false"/>
             </column>
         </createTable>
+
+        <createTable tableName="service">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(150)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+
+        <createTable tableName="hospitalization">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="serviceId" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="doctorId" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="patientId" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startDate" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="endDate" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+
+        <createTable tableName="serviceHospitalizations">
+            <column name="serviceName" type="VARCHAR(150)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nbHospitalizations" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+
+        <createTable tableName="stat">
+            <column name="nbDoctors" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nbPatients" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nbServices" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
         <rollback>
             <dropTable tableName="pokemon"/>
             <dropTable tableName="docteur"/>
             <dropTable tableName="patient"/>
+            <dropTable tableName="service"/>
+            <dropTable tableName="hospitalization"/>
+            <dropTable tableName="serviceHospitalizations"/>
+            <dropTable tableName="stat"/>
         </rollback>
     </changeSet>
 </databaseChangeLog>
