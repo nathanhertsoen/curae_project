@@ -5,7 +5,8 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
 
-    <changeSet id="database_setup" author="Nathan.Herts">
+    <changeSet id="database_setup" author="Cyril, Nahtan, Wassim">
+        <!--   Table pokemon     -->
         <createTable tableName="pokemon">
             <column autoIncrement="true" name="id" type="INT">
                 <constraints primaryKey="true"/>
@@ -24,7 +25,7 @@
             </column>
         </createTable>
 
-
+        <!--   Table docteur     -->
         <createTable tableName="docteur">
             <column autoIncrement="true" name="id" type="INT">
                 <constraints primaryKey="true"/>
@@ -43,7 +44,7 @@
             </column>
         </createTable>
 
-
+        <!--   Table patient     -->
         <createTable tableName="patient">
             <column autoIncrement="true" name="id" type="INT">
                 <constraints primaryKey="true"/>
@@ -59,6 +60,7 @@
             </column>
         </createTable>
 
+        <!--   Table service     -->
         <createTable tableName="service">
             <column autoIncrement="true" name="id" type="INT">
                 <constraints primaryKey="true"/>
@@ -71,7 +73,7 @@
             </column>
         </createTable>
 
-
+        <!--   Table hospitalization     -->
         <createTable tableName="hospitalization">
             <column autoIncrement="true" name="id" type="INT">
                 <constraints primaryKey="true"/>
@@ -93,7 +95,7 @@
             </column>
         </createTable>
 
-
+        <!--   Table serviceHospitalizations     -->
         <createTable tableName="serviceHospitalizations">
             <column name="serviceName" type="VARCHAR(150)">
                 <constraints nullable="false"/>
@@ -103,7 +105,7 @@
             </column>
         </createTable>
 
-
+        <!--   Table stat     -->
         <createTable tableName="stat">
             <column name="nbDoctors" type="INT">
                 <constraints nullable="false"/>
