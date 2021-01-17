@@ -66,7 +66,7 @@
             <column name="name" type="VARCHAR(20)">
                 <constraints nullable="false"/>
             </column>
-            <column name="description" type="VARCHAR(150)">
+            <column name="description" type="VARCHAR(500)">
                 <constraints nullable="false"/>
             </column>
         </createTable>

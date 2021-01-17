@@ -1,9 +1,10 @@
 package com.ulco.curae.model;
 
-import com.ulco.curae.dto.DoctorDTO;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.ulco.curae.dto.HospitalizationDTO;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -11,7 +12,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Table(name = "hospitalisation")
+@Table(name = "hospitalization")
 public class HospitalizationDO {
 
     @Id
@@ -19,17 +20,19 @@ public class HospitalizationDO {
     private Integer id;
 
     // between quote, names become case-sensitive, then use column named in uppercase to call the right column name
-    @Column(name = "IDSERVICE")
-    private Integer idService;
+    @Column(name = "SERVICEID")
+    private Integer serviceId;
 
-    @Column(name = "IDDOCTOR")
-    private Integer idDoctor;
+    @Column(name = "DOCTORID")
+    private Integer doctorId;
 
-    @Column(name = "IDPATIENT")
-    private Integer idPatient;
+    @Column(name = "PATIENTID")
+    private Integer patientId;
+
 
     @Column(name = "STARTDATE")
     private Date startDate;
+
 
     @Column(name = "ENDDATE")
     private Date endDate;
@@ -39,9 +42,9 @@ public class HospitalizationDO {
     public HospitalizationDTO toHospitalizationDTO() {
         HospitalizationDTO hospitalizationDTO = new HospitalizationDTO();
         hospitalizationDTO.setId(id);
-        hospitalizationDTO.setIdService(idService);
-        hospitalizationDTO.setIdDoctor(idDoctor);
-        hospitalizationDTO.setIdPatient(idPatient);
+        hospitalizationDTO.setServiceId(serviceId);
+        hospitalizationDTO.setDoctorId(doctorId);
+        hospitalizationDTO.setPatientId(patientId);
         hospitalizationDTO.setStartDate(startDate);
         hospitalizationDTO.setEndDate(endDate);
 
