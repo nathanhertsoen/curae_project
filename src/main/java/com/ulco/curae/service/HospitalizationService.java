@@ -1,13 +1,9 @@
 package com.ulco.curae.service;
 
-import com.ulco.curae.dto.DoctorDTO;
 import com.ulco.curae.dto.HospitalizationDTO;
 import com.ulco.curae.exception.NotFoundException;
-import com.ulco.curae.mapper.IDoctorMapper;
 import com.ulco.curae.mapper.IHospitalizationMapper;
-import com.ulco.curae.model.DoctorDO;
 import com.ulco.curae.model.HospitalizationDO;
-import com.ulco.curae.repository.IDoctorRepository;
 import com.ulco.curae.repository.IHospitalizationRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
