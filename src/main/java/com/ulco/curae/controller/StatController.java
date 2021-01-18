@@ -18,7 +18,7 @@ public class StatController {
 
     @GetMapping
     @ApiOperation("Selectionner toutes les stats.")
-    public List<StatDTO> getAll() {
-        return statService.getAll();
+    public StatDTO getAll() {
+        return statService.getStat();
     }
 }
