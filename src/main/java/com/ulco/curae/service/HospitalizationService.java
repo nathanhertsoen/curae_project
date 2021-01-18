@@ -27,13 +27,21 @@ public class HospitalizationService implements IHospitalizationService {
 
     @Override
     public List<HospitalizationDTO> getAll() {
-        return hospitalizationRepository.findAll().stream()
+        System.out.println(hospitalizationRepository.count());
+        return hospitalizationRepository.findAll()
+                .stream()
                 .map(HospitalizationDO::toHospitalizationDTO)
                 .collect(Collectors.toList());
     }
 
+    public List<HospitalizationDTO> findHospitalizationByServiceId(Integer id){
+        return hospitalizationRepository.findByServiceId(id).stream()
+                .map(hospitalizationMapper::toHospitalizationDTO)
+                .collect(Collectors.toList());
+    }
+
     @Override
-    public HospitalizationDTO findById(Integer id) {
+    public HospitalizationDTO findById(Integer id){
         return hospitalizationRepository.findById(id)
                 .map(HospitalizationDO::toHospitalizationDTO)
                 .orElseThrow(NotFoundException::new);

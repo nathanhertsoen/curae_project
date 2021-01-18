@@ -5,14 +5,16 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
 public interface IHospitalizationService {
     List<HospitalizationDTO> getAll();
+    List<HospitalizationDTO> findHospitalizationByServiceId(Integer id);
     HospitalizationDTO findById(Integer id);
 
 
     HospitalizationDTO save(HospitalizationDTO hospitalizationDTO);
     void updateOne(HospitalizationDTO hospitalizationDTO, Integer id);
+
 
     void deleteById(Integer id);
 

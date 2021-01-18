@@ -26,8 +26,17 @@ public class PatientService implements IPatientService {
     @Autowired
     private IPatientRepository patientRepository;
 
+
+    @Override
+    public Integer countPatients() {
+        return (int) patientRepository.count();
+    }
+
+
+
     @Override
     public List<PatientDTO> getAll() {
+        System.out.println(patientRepository.count());
         return patientRepository.findAll().stream()
                 .map(PatientDO::toPatientDTO)
                 .collect(Collectors.toList());

@@ -1,5 +1,6 @@
 package com.ulco.curae.controller;
 
+import com.ulco.curae.dto.HospitalizationDTO;
 import com.ulco.curae.dto.ServiceDTO;
 import com.ulco.curae.service.IServiceService;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,6 +26,13 @@ public class ServiceController {
     @ApiOperation("Selectionner tous les services.")
     public List<ServiceDTO> getAll() {
         return serviceService.getAll();
+    }
+
+
+    @GetMapping("/{id}/hospitalizations")
+    @ApiOperation("Liste des hospitalisations qui ont eu lieu dans ce service.")
+    public List<HospitalizationDTO> findServiceHospitalization(@PathVariable Integer id){
+    return serviceService.findServiceHospitalization(id);
     }
 
 

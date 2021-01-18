@@ -26,11 +26,19 @@ public class DoctorService implements IDoctorService {
     @Autowired
     private IDoctorRepository doctorRepository;
 
+
+
     @Override
     public List<DoctorDTO> getAll() {
+        System.out.println(doctorRepository.count());
         return doctorRepository.findAll().stream()
                 .map(DoctorDO::toDoctorDTO)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public Integer countDoctors() {
+        return (int) doctorRepository.count();
     }
 
     @Override
@@ -39,6 +47,16 @@ public class DoctorService implements IDoctorService {
                 .map(DoctorDO::toDoctorDTO)
                 .orElseThrow(NotFoundException::new);
     }
+
+
+//    Integer count=0;
+//    DoctorService(){
+//        count++;
+//        log.info("Itération:"+count);
+//    }
+
+
+
 
     @Override
     public DoctorDTO save(DoctorDTO doctorDTO) {

@@ -9,6 +9,7 @@ import java.util.List;
 @Service
 public interface IDoctorService {
     List<DoctorDTO> getAll();
+    Integer countDoctors();
     DoctorDTO findById(Integer id);
 
 

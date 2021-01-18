@@ -9,7 +9,7 @@ import java.util.List;
 public interface IPatientService {
     List<PatientDTO> getAll();
     PatientDTO findById(Integer id);
-
+    Integer countPatients();
 
     PatientDTO save(PatientDTO patientDTO);
     void updateOne(PatientDTO patientDTO, Integer id);

@@ -12,3 +12,5 @@ INSERT INTO service VALUES (3, 'Radiologie','Spécialité médicale qui utilise 
 
 -- FORMAT CONVERSION ACTIVE : "yyyy-MM-dd+1" TO "dd-MM-yyyy"
 INSERT INTO hospitalization VALUES (1, 1, 1, 1, '1970-01-02', '2021-01-22');
+INSERT INTO hospitalization VALUES (2, 1, 1, 1, '1970-01-02', '2021-01-22');
+INSERT INTO hospitalization VALUES (3, 2, 1, 1, '1970-01-02', '2021-01-22');
