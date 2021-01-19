@@ -17,7 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/pokemons")
 public class PokemonController {
-    @ApiModelProperty("Powered by Hertsoen Technology ©")
+    @ApiModelProperty("Powered by DHP Technology ©")
 
     @Autowired
     private IPokemonService pokemonService;

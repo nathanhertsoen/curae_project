@@ -17,10 +17,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/services")
 public class ServiceController {
-    @ApiModelProperty("Powered by Hertsoen Technology ©")
+    @ApiModelProperty("Powered by DHP Technology ©")
 
     @Autowired
     private IServiceService serviceService;
+
+
 
     @GetMapping
     @ApiOperation("Selectionner tous les services.")
@@ -32,8 +34,28 @@ public class ServiceController {
     @GetMapping("/{id}/hospitalizations")
     @ApiOperation("Liste des hospitalisations qui ont eu lieu dans ce service.")
     public List<HospitalizationDTO> findServiceHospitalization(@PathVariable Integer id){
-    return serviceService.findServiceHospitalization(id);
+
+        return serviceService.findServiceHospitalization(id);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     @GetMapping("/{id}")

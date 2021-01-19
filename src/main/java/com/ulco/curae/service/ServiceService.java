@@ -33,6 +33,37 @@ public class ServiceService implements IServiceService {
     private IHospitalizationService hospitalizationService;
 
 
+    @Override
+    public List<HospitalizationDTO> findServiceHospitalization(Integer id){
+        return hospitalizationService.findHospitalizationByServiceId(id);
+    }
+
+//    @Override
+//    public List<ServiceDTO> findNameById(Integer id){
+//        return serviceRepository.findByName(id).stream()
+//                .map(serviceRepository::toServiceDTO)
+//                .collect(Collectors.toList());
+//    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Override
     public Integer countServices() {
@@ -56,11 +87,7 @@ public class ServiceService implements IServiceService {
     }
 
 
-    @Override
-    public List<HospitalizationDTO> findServiceHospitalization(Integer id){
 
-       return hospitalizationService.findHospitalizationByServiceId(id);
-    }
 
     @Override
     public ServiceDTO save(ServiceDTO serviceDTO) {

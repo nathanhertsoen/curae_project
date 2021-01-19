@@ -6,15 +6,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Data
 @AllArgsConstructor // prends tous les paramètres de notre classe en entrée
 @NoArgsConstructor // ajouter un constructeur par défaut
 
-//Chose 'callSuper=true' if
-// - you are inheriting from a superclass that either has no state information,
-// - or itself is using the @Data annotation,
-// - or has implementations of equals/hash that "handle the situation properly"
+
 
 
 public class ServiceHospitalizationDTO {

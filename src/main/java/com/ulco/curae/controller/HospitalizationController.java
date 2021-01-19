@@ -18,7 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/hospitalizations")
 public class HospitalizationController {
-    @ApiModelProperty("Powered by Hertsoen Technology ©")
+    @ApiModelProperty("Powered by DHP Technology ©")
 
     @Autowired
     private IHospitalizationService hospitalizationService;

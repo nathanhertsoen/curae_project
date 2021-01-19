@@ -13,6 +13,20 @@ public interface IServiceService {
     List<HospitalizationDTO> findServiceHospitalization(Integer id);
     Integer countServices();
 
+
+
+
+
+//    List<ServiceDTO> findNameById(Integer id);
+
+
+
+
+
+
+
+
+
     ServiceDTO findById(Integer id);
 
     ServiceDTO save(ServiceDTO serviceDTO);
