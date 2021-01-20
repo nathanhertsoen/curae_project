@@ -2,6 +2,12 @@ spring:
   profiles:
 #    active: "development"
 
+  jpa :
+      show-sql : true
+  properties :
+      hibernate :
+              format_sql: true
+
   h2:
     console:
       enabled: true

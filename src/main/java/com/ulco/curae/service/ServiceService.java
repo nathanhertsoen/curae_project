@@ -27,8 +27,6 @@ public class ServiceService implements IServiceService {
     @Autowired
     private IServiceRepository serviceRepository;
 
-
-
     @Autowired
     private IHospitalizationService hospitalizationService;
 
@@ -44,25 +42,6 @@ public class ServiceService implements IServiceService {
 //                .map(serviceRepository::toServiceDTO)
 //                .collect(Collectors.toList());
 //    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     @Override

@@ -12,6 +12,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -47,6 +50,8 @@ public class HospitalizationService implements IHospitalizationService {
         serviceHospitalizationDTO.setNbHospitalizations((int) hospitalizationRepository.count());
         return serviceHospitalizationDTO;
     }
+
+
 
 
 
@@ -97,5 +102,13 @@ public class HospitalizationService implements IHospitalizationService {
         HospitalizationDO hospitalizationToUpdate = hospitalizationMapper.toHospitalizationDO(hospitalizationDTO);
         hospitalizationToUpdate.setId(id);
         hospitalizationRepository.save(hospitalizationToUpdate);
+    }
+
+    @Override
+    public List<HospitalizationDTO> getAllCurrentHospitalizations() {
+        Date currentDay = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());
+        return hospitalizationRepository.findByStartDateBeforeAndEndDateAfter(currentDay,currentDay).stream()
+                .map(hospitalizationMapper::toHospitalizationDTO)
+                .collect(Collectors.toList());
     }
 }

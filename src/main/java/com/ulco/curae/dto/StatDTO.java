@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor // prends tous les paramètres de notre classe en entrée
 @NoArgsConstructor // ajouter un constructeur par défaut
@@ -18,5 +20,5 @@ public class StatDTO  {
   Integer nbDoctors;
   Integer nbPatients;
   Integer nbServices;
-
+  List<ServiceHospitalizationDTO> serviceHospitalisations;
 }

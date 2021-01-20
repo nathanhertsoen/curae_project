@@ -17,6 +17,7 @@ public interface IHospitalizationService {
     HospitalizationDTO save(HospitalizationDTO hospitalizationDTO);
     void updateOne(HospitalizationDTO hospitalizationDTO, Integer id);
 
+    List<HospitalizationDTO> getAllCurrentHospitalizations();
 
     void deleteById(Integer id);
 

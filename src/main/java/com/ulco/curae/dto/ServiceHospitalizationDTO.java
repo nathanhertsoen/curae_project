@@ -17,10 +17,12 @@ import java.util.List;
 
 public class ServiceHospitalizationDTO {
 
+    @ApiModelProperty("nom du service")
+    private String serviceName;
+
     @ApiModelProperty("id")
     private Integer nbHospitalizations;
 
-    @ApiModelProperty("nom du service")
-    private String serviceName;
+
 
 }
