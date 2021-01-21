@@ -15,6 +15,7 @@ L’hôpital de la région possède un système de gestion des hospitalisations 
 
 ● statistiques à l’instant T 
 
+
 Objectifs : 
 
 ● Mettre en place une API respectant les principes des WS-RESTfull et l’architecture N-tiers ● Proposer une implémentation de bout-en-bout en respectant les contraintes d’un projet client 
