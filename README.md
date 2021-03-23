@@ -7,29 +7,31 @@ Hospitalization API
 
 Contexte : 
 
+
 L’hôpital de la région possède un système de gestion des hospitalisations catastrophique (papier-crayon). Impossible de savoir si des services sont débordés pour les hospitalisations de nouveaux patients. Vous venez de gagner le contrat pour la mise en place d’une API pour gérer les hospitalisations. L’hôpital souhaite pouvoir gérer différents aspects : 
 
-● les médecins
+    ● les médecins
 
-● les services,
+    ● les services,
 
-● les patients, 
+    ● les patients, 
 
-● les hospitalisations en cours, 
+    ● les hospitalisations en cours, 
 
-● statistiques à l’instant T 
+    ● statistiques à l’instant T 
 
 
-Objectifs : 
+Objectifs :
 
-● Mettre en place une API respectant les principes des WS-RESTfull et l’architecture N-tiers 
 
-● Proposer une implémentation de bout-en-bout en respectant les contraintes d’un projet client 
+    ● Mettre en place une API respectant les principes des WS-RESTfull et l’architecture N-tiers 
 
-● Développer une API découpée en 3 couches (présentation, métier, persistance) 
+    ● Proposer une implémentation de bout-en-bout en respectant les contraintes d’un projet client 
 
-● Persister les données nécessaires dans une base de donnée (H2) 
+    ● Développer une API découpée en 3 couches (présentation, métier, persistance) 
 
-● Gérer les schémas de BDD à l’aide d’un outil dédié (liquibase) 
+    ● Persister les données nécessaires dans une base de donnée (H2) 
 
-● Valider / Invalider les entrants (validation) 
+    ● Gérer les schémas de BDD à l’aide d’un outil dédié (liquibase) 
+
+    ● Valider / Invalider les entrants (validation) 
